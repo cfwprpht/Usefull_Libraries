@@ -1,0 +1,225 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>nor4ps</name>
+    </assembly>
+    <members>
+        <member name="T:nor4ps.PS4Nor">
+            <summary>
+            Public Class that handles the PS4 NOR Flash
+            </summary>
+        </member>
+        <member name="F:nor4ps.PS4Nor.ffCSerial">
+            <summary>
+            Used from the GUI Code to see if the returned value is not only FF bytes
+            </summary>
+        </member>
+        <member name="F:nor4ps.PS4Nor.ffMAC">
+            <summary>
+            Used from the GUI Code to see if the returned value is not only FF bytes
+            </summary>
+        </member>
+        <member name="F:nor4ps.PS4Nor.ffSKU">
+            <summary>
+            Used from the GUI Code to see if the returned value is not only FF bytes
+            </summary>
+        </member>
+        <member name="F:nor4ps.PS4Nor._sceBigMagic">
+            <summary>
+            Checked from the GUI Code to see which checks have passed and which not
+            </summary>
+        </member>
+        <member name="F:nor4ps.PS4Nor._sceSmallMagic1">
+            <summary>
+            Checked from the GUI Code to see which checks have passed and which not
+            </summary>
+        </member>
+        <member name="F:nor4ps.PS4Nor._sceSmallMagic2">
+            <summary>
+            Checked from the GUI Code to see which checks have passed and which not
+            </summary>
+        </member>
+        <member name="F:nor4ps.PS4Nor._dbcbMagic1">
+            <summary>
+            Checked from the GUI Code to see which checks have passed and which not
+            </summary>
+        </member>
+        <member name="F:nor4ps.PS4Nor._dbcbMagic2">
+            <summary>
+            Checked from the GUI Code to see which checks have passed and which not
+            </summary>
+        </member>
+        <member name="F:nor4ps.PS4Nor._dbcbMagic3">
+            <summary>
+            Checked from the GUI Code to see which checks have passed and which not
+            </summary>
+        </member>
+        <member name="F:nor4ps.PS4Nor._slb2Magic1">
+            <summary>
+            Checked from the GUI Code to see which checks have passed and which not
+            </summary>
+        </member>
+        <member name="F:nor4ps.PS4Nor._scevtrmMagic1">
+            <summary>
+            Checked from the GUI Code to see which checks have passed and which not
+            </summary>
+        </member>
+        <member name="F:nor4ps.PS4Nor._blobMagic1">
+            <summary>
+            Checked from the GUI Code to see which checks have passed and which not
+            </summary>
+        </member>
+        <member name="F:nor4ps.PS4Nor._blobMagic2">
+            <summary>
+            Checked from the GUI Code to see which checks have passed and which not
+            </summary>
+        </member>
+        <member name="F:nor4ps.PS4Nor._blobMagic3">
+            <summary>
+            Checked from the GUI Code to see which checks have passed and which not
+            </summary>
+        </member>
+        <member name="F:nor4ps.PS4Nor._blobMagic4">
+            <summary>
+            Checked from the GUI Code to see which checks have passed and which not
+            </summary>
+        </member>
+        <member name="F:nor4ps.PS4Nor._blobMagic5">
+            <summary>
+            Checked from the GUI Code to see which checks have passed and which not
+            </summary>
+        </member>
+        <member name="F:nor4ps.PS4Nor._blobMagic6">
+            <summary>
+            Checked from the GUI Code to see which checks have passed and which not
+            </summary>
+        </member>
+        <member name="F:nor4ps.PS4Nor._blobMagic7">
+            <summary>
+            Checked from the GUI Code to see which checks have passed and which not
+            </summary>
+        </member>
+        <member name="F:nor4ps.PS4Nor._blobMagic8">
+            <summary>
+            Checked from the GUI Code to see which checks have passed and which not
+            </summary>
+        </member>
+        <member name="F:nor4ps.PS4Nor._blobMagic9">
+            <summary>
+            Checked from the GUI Code to see which checks have passed and which not
+            </summary>
+        </member>
+        <member name="F:nor4ps.PS4Nor._ccMagic1">
+            <summary>
+            Checked from the GUI Code to see which checks have passed and which not
+            </summary>
+        </member>
+        <member name="F:nor4ps.PS4Nor._ccMagic2">
+            <summary>
+            Checked from the GUI Code to see which checks have passed and which not
+            </summary>
+        </member>
+        <member name="F:nor4ps.PS4Nor._ccMagic3">
+            <summary>
+            Checked from the GUI Code to see which checks have passed and which not
+            </summary>
+        </member>
+        <member name="F:nor4ps.PS4Nor._c01A">
+            <summary>
+            Checked from the GUI Code to see which checks have passed and which not
+            </summary>
+        </member>
+        <member name="F:nor4ps.PS4Nor._c01B">
+            <summary>
+            Checked from the GUI Code to see which checks have passed and which not
+            </summary>
+        </member>
+        <member name="F:nor4ps.PS4Nor._slb2Magic2">
+            <summary>
+            Checked from the GUI Code to see which checks have passed and which not
+            </summary>
+        </member>
+        <member name="F:nor4ps.PS4Nor._slb2Magic3">
+            <summary>
+            Checked from the GUI Code to see which checks have passed and which not
+            </summary>
+        </member>
+        <member name="F:nor4ps.PS4Nor._slb2Magic4">
+            <summary>
+            Checked from the GUI Code to see which checks have passed and which not
+            </summary>
+        </member>
+        <member name="F:nor4ps.PS4Nor._scevtrmMagic2">
+            <summary>
+            Checked from the GUI Code to see which checks have passed and which not
+            </summary>
+        </member>
+        <member name="F:nor4ps.PS4Nor._slb2NR3Checksum">
+            <summary>
+            Checked from the GUI Code to see which checks have passed and which not
+            </summary>
+        </member>
+        <member name="M:nor4ps.PS4Nor.CheckDumpFull(System.String)">
+            <summary>
+            Check the Input Dump file for a few known values to wether indicate it is a PS4 NOR Dump or not and to see if the Dumped Data do match the known Console Constants
+            </summary>
+            <param name="dump">The Input Dump File</param>
+        </member>
+        <member name="M:nor4ps.PS4Nor.CheckHeader(System.String)">
+            <summary>
+            Quick -Check the Header of the Input Dump file if it is a valied PS4 Dump file
+            </summary>
+            <param name="dump">The Input Dump File</param>
+            <returns>True if the Header of the input Dump do Match the SCE Header</returns>
+        </member>
+        <member name="M:nor4ps.PS4Nor.CheckSize(System.String)">
+            <summary>
+            Check the Size of the Input Dump
+            </summary>
+            <param name="dump">The Input Dump File</param>
+            <returns>True if the Size of the Input Dump do match the knowen Length</returns>
+        </member>
+        <member name="M:nor4ps.PS4Nor.GetMAC(System.String)">
+            <summary>
+            Get MAC Address
+            </summary>
+            <param name="dump">The Input Dump File</param>
+            <returns>The MAC address of the Console</returns>
+        </member>
+        <member name="M:nor4ps.PS4Nor.GetCID(System.String)">
+            <summary>
+            Get Console ID
+            </summary>
+            <param name="dump">The Input Dump File</param>
+            <returns>The Console Serial</returns>
+        </member>
+        <member name="M:nor4ps.PS4Nor.GetSKU(System.String)">
+            <summary>
+            Get SKU Model
+            </summary>
+            <param name="dump">The Input Dump File</param>
+            <returns>The SKU Version</returns>
+        </member>
+        <member name="M:nor4ps.PS4Nor.GetFWV(System.String)">
+            <summary>
+            Get FirmWare Version
+            </summary>
+            <param name="dump">The Input Dump File</param>
+            <returns>The FirmWare Version</returns>
+        </member>
+        <member name="M:nor4ps.PS4Nor.ExtractSLB2(System.String,System.String)">
+            <summary>
+            Extract all 4 SLB2 Container from a PS4 NOR Flash Dump and write them to a file with a .SLB2 extension
+            </summary>
+            <param name="dump">The Input Dump File</param>
+            <param name="path">The path where to extract the files</param>
+        </member>
+        <member name="M:nor4ps.PS4Nor.ExtractDump(System.String,System.String)">
+            <summary>
+            Extract a PS4 NOR Dump File
+            </summary>
+            <param name="dump">The Input Dump File</param>
+            <param name="path">The path to where the files will be extracted</param>
+        </member>
+    </members>
+</doc>

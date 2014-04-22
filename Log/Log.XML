@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Log</name>
+    </assembly>
+    <members>
+        <member name="T:Log.Logger">
+            <summary>
+            The Logger Class to handle Logger's or write simpli text to a file or just read from a text file and output it into a command shell
+            </summary>
+        </member>
+        <member name="M:Log.Logger.WriteLine(System.String,System.String,System.String)">
+            <summary>
+            Write Text to a Log file
+            </summary>
+            <param name="useLog">The File to use</param>
+            <param name="logMessage">Text to write</param>
+            <param name="dt">Determine wether to use Date and Time for the Text string to be writen</param>
+        </member>
+        <member name="M:Log.Logger.WriteText(System.String,System.String)">
+            <summary>
+            Simpli Text Writer
+            </summary>
+            <param name="writeToFile">The File to use</param>
+            <param name="textToWrite">Text to write</param>
+        </member>
+        <member name="M:Log.Logger.ReadLine(System.String)">
+            <summary>
+            Read Text from a File and Output it in a Command Prompt
+            </summary>
+            <param name="readFromFile"></param>
+        </member>
+    </members>
+</doc>

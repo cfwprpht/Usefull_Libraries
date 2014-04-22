@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SLB2</name>
+    </assembly>
+    <members>
+        <member name="T:SLB2PS4.SLB2">
+            <summary>
+            SLB2 Class to handle the PS4'S SLB2 container
+            </summary>
+        </member>
+        <member name="M:SLB2PS4.SLB2.ResetVars">
+            <summary>
+            Reset the major Variables for the next SLB2 Container
+            </summary>
+        </member>
+        <member name="M:SLB2PS4.SLB2.CheckHeader(System.String)">
+            <summary>
+            Check SLB2 Magic of a SLB2 Container
+            </summary>
+            <param name="slb2">The SLB2 Container to check</param>
+            <returns>True if the File Magic do match the SLB2 Magic</returns>
+        </member>
+        <member name="M:SLB2PS4.SLB2.Read(System.String)">
+            <summary>
+            Read the TOC of the SLB2 Container
+            </summary>
+            <param name="slb2">The SLB2 Container to read the TOC from</param>
+        </member>
+        <member name="M:SLB2PS4.SLB2.GetVersion">
+            <summary>
+            Get the Version of the SLB2 Container (Need's Read() to be called once before)
+            </summary>
+            <returns>The version of the SLB2 Container</returns>
+        </member>
+        <member name="M:SLB2PS4.SLB2.GetFileCount">
+            <summary>
+            Get File Count of SLB2 Container (Need's Read() to be called once before)
+            </summary>
+            <returns>File Count of the input SLB2 Container</returns>
+        </member>
+        <member name="M:SLB2PS4.SLB2.CheckSize">
+            <summary>
+            Check the Size of the input SLB2 Container against the saved size in the header (Need's Read() to be called once before)
+            </summary>
+            <returns>True if the saved size in header do match the reall file size</returns>
+        </member>
+        <member name="M:SLB2PS4.SLB2.Extract(System.String,System.String)">
+            <summary>
+            Extract a SLB2 Container
+            </summary>
+            <param name="slb2">The SLB2 Container to use</param>
+            <param name="path">The path where to save the extracted files</param>
+        </member>
+    </members>
+</doc>
